@@ -28,6 +28,8 @@ func SendEmail(email string, token string) {
 	msg := "Subject: " + subject + "\n" + mime + "\n" + "\n" + htmlContent
 	msg = strings.Replace(msg, "\n", "\r\n", -1)
 
+	fmt.Println("Hello from orther user")
+
 	// Connect to the server, authenticate, set the sender and recipient,
 	// and send the email all in one step.
 	err := smtp.SendMail(smtpHost+":"+smtpPort,

@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 	"test-echo/auth"
 	"test-echo/common"
@@ -134,6 +135,10 @@ func RequestResetPassword(db *gorm.DB) echo.HandlerFunc {
 			"message": "A reset password email has been sent",
 		})
 	}
+}
+
+func Hello() {
+	fmt.Println("Hello")
 }
 
 func ResetPassword(db *gorm.DB) echo.HandlerFunc {

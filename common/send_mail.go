@@ -33,6 +33,7 @@ func SendEmail(email string, token string) {
 
 	fmt.Println("Hello from tinh test")
 
+
 	// Connect to the server, authenticate, set the sender and recipient,
 	// and send the email all in one step.
 	err := smtp.SendMail(smtpHost+":"+smtpPort,

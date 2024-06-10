@@ -1,6 +1,7 @@
 package common
 
 import (
+	"fmt"
 	"log"
 	"net/smtp"
 	"os"
@@ -27,6 +28,10 @@ func SendEmail(email string, token string) {
 	mime := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"
 	msg := "Subject: " + subject + "\n" + mime + "\n" + "\n" + htmlContent
 	msg = strings.Replace(msg, "\n", "\r\n", -1)
+
+	fmt.Println("Hello from tinh")
+
+	fmt.Println("Hello from tinh test")
 
 	// Connect to the server, authenticate, set the sender and recipient,
 	// and send the email all in one step.
